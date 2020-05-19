@@ -151,7 +151,7 @@ endif()
 if(CMAKE_CXX_COMPILER_ID MATCHES "GNU" OR CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
     find_package(CUDA)
     if (CUDA_FOUND)
-        set(CUDA_TARGET_ARCH "Kepler Maxwell Pascal" CACHE STRING "Target architecture(s) for CUDA")
+        set(CUDA_TARGET_ARCH "Kepler Maxwell Pascal Volta" CACHE STRING "Target architecture(s) for CUDA")
         cuda_select_nvcc_arch_flags(CUDA_ARCH_FLAGS ${CUDA_TARGET_ARCH})
 
         if (OPENMP_FOUND)
